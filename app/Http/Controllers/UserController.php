@@ -26,4 +26,19 @@ class UserController extends Controller
     {
         return view('user.index');
     }
+
+    public function about()
+    {
+        return view('user.tentang');
+    }
+
+    public function paket()
+    {
+        return view('user.paket');
+    }
+
+    public function voucher()
+    {
+        return view('user.voucher');
+    }
 }
