@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MakananController;
+use App\Http\Controllers\VoucherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +21,16 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [UserController::class, 'index'])->name('index');
 
+
+// User
+Route::get('/', [UserController::class, 'index'])->name('index');
+Route::get('/tentangkami', [UserController::class, 'tentangkami'])->name('tentangkami');
+Route::get('/kontak', [MakananController::class, 'paketmakanan'])->name('paketmakanan');
+Route::get('/produk', [MakananController::class, 'troli'])->name('troli');
+Route::get('/detailproduk', [VoucherController::class, 'voucher'])->name('voucher');
+
+// Adminn
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

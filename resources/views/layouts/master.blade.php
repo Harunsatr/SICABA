@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SICABA | Katering</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{{ asset('pacific/css/animate.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('pacific/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('pacific/css/owl.theme.default.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('pacific/css/magnific-popup.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('pacific/css/bootstrap-datepicker.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('pacific/css/jquery.timepicker.css') }}" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ asset('pacific/css/flaticon.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('pacific/css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"> SICABA <span> Katering Bu Aini </span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                    <li class="nav-item"><a href="destination.html" class="nav-link">Paket Makanan</a></li>
+                    <li class="nav-item"><a href="hotel.html" class="nav-link">Voucher</a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <img src="{{ asset('pacific/img/keranjang.png') }}" alt="Logo"
+                                style="width: 30px; height: auto;">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    @yield('content')
+
+    {{-- Fotter START --}}
+    <div class="container-fluid bg-pooter footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s" style="background-color: #f15d30;">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="colornew"> &copy; <span class="colornew">2023 SICABA | Katering Bu Aini</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- Fotter END --}}
+
+    <!-- Loader START -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4"
+                stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4"
+                stroke-miterlimit="10" stroke="#F96D00" />
+        </svg></div>
+    {{-- Loader END --}}
+
+    {{-- Script  --}}
+    <script src="{{ asset('pacific/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/popper.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('pacific/js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ asset('pacific/js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('pacific/js/scrollax.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{{ asset('pacific/js/google-map.js') }}"></script>
+    <script src="{{ asset('pacific/js/main.js') }}"></script>
+</body>
+</html>

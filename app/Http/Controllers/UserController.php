@@ -26,4 +26,8 @@ class UserController extends Controller
     {
         return view('user.index');
     }
+    public function tentangkami()
+    {
+        return view('user.tentangkami');
+    }
 }
