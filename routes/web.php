@@ -6,6 +6,7 @@ use App\Http\Controllers\MakananController;
 use App\Http\Controllers\VoucherController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,27 +22,25 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-
-
-// User
 Route::get('/', [UserController::class, 'index'])->name('index');
-Route::get('/tentangkami', [UserController::class, 'tentangkami'])->name('tentangkami');
-Route::get('/kontak', [MakananController::class, 'paketmakanan'])->name('paketmakanan');
-Route::get('/produk', [MakananController::class, 'troli'])->name('troli');
-Route::get('/detailproduk', [VoucherController::class, 'voucher'])->name('voucher');
 
-// Adminn
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
+Route::get('/', [UserController::class, 'index'])->name('index');
+
+
+
+// Profile routes
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('admin', function () {
+// Admin route
+Route::get('/admin', function () {
     return view('admin');
 })->middleware(['auth', 'verified', 'role:admin']);
 

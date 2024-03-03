@@ -1,7 +1,7 @@
-@extends('layouts.master')
-
+@extends('layout.master')
 @section('content')
-    {{-- Landing START --}}
+@section('menuHome', 'active')
+
     <div class="hero-wrap js-fullheight" style="background-image: url('pacific/img/bg_5.jpg');">
         <div class="overlay"></div>
         <div class="container">
@@ -703,64 +703,19 @@
         </div>
     </section>
 
-    {{-- Cara memesan START--}}
-    <section class="mb-6">
-        <div class="container">
-            <div class="row justify-content-center g-0">
-                <div class="col-xl-9">
-                    <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
-                        <h5 class="fw-bold colornew1 fs-3 fs-lg-5 lh-sm my-6">How does it work</h5>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3 mb-6">
-                            <div class="text-center"><img class="shadow-icon" src="pacific/img/location.png"
-                                    height="112" alt="..." />
-                                <h5 class="mt-4 fw-bold">Select location</h5>
-                                <p class="mb-md-0">Choose the location where your food will be delivered.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mb-6">
-                            <div class="text-center"><img class="shadow-icon" src="pacific/img/order.png"
-                                    height="112" alt="..." />
-                                <h5 class="mt-4 fw-bold">Choose order</h5>
-                                <p class="mb-md-0">Check over hundreds of menus to pick your favorite food</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mb-6">
-                            <div class="text-center"><img class="shadow-icon" src="pacific/img/pay.png"
-                                    height="112" alt="..." />
-                                <h5 class="mt-4 fw-bold">Pay advanced</h5>
-                                <p class="mb-md-0">It's quick, safe, and simple. Select several methods of payment</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mb-6">
-                            <div class="text-center"><img class="shadow-icon" src="pacific/img/meals.png"
-                                    height="112" alt="..." />
-                                <h5 class="mt-4 fw-bold">Enjoy meals</h5>
-                                <p class="mb-md-0">Food is made and delivered directly to your home.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    {{-- Cara memesan END --}}
+		<section class="ftco-intro ftco-section ftco-no-pt">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center">
+						<div class="img"  style="background-image: url('pacific/img/bg_2.jpg');">
+							<div class="overlay"></div>
+							<h2>We Are Pacific A Travel Agency</h2>
+							<p>We can manage your dream building A small river named Duden flows by their place</p>
+							<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    {{-- menu pesanan custom START --}}
-    <section class="ftco-intro ftco-section ftco-no-pt mt-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <div class="img" style="background-image: url('pacific/img/bg_2.jpg');">
-                        <div class="overlay"></div>
-                        <h2>We Are Pacific A Travel Agency</h2>
-                        <p>We can manage your dream building A small river named Duden flows by their place</p>
-                        <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    {{-- menu pesanan custom END --}}
-@stop
+@endsection
