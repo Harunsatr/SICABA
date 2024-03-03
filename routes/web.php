@@ -22,13 +22,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [UserController::class, 'index'])->name('index');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+// User routes
 Route::get('/', [UserController::class, 'index'])->name('index');
+Route::get('/tentangkami', [UserController::class, 'tentangkami'])->name('tentangkami');
+Route::get('/paketmakanan', [MakananController::class, 'paketmakanan'])->name('paketmakanan');
+Route::get('/voucher', [VoucherController::class, 'voucher'])->name('voucher');
+Route::get('troli', [MakananController::class, 'troli'])->name('troli');
 
 
 

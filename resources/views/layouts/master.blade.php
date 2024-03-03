@@ -27,27 +27,47 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html"> SICABA <span> Katering Bu Aini </span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">SICABA<span>Katering Bu Aini</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Beranda</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">Tentang Kami</a></li>
-                    <li class="nav-item"><a href="destination.html" class="nav-link">Paket Makanan</a></li>
-                    <li class="nav-item"><a href="hotel.html" class="nav-link">Voucher</a></li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">
-                            <img src="{{ asset('pacific/img/keranjang.png') }}" alt="Logo"
-                                style="width: 30px; height: auto;">
-                        </a>
-                    </li>
+                    <li class="nav-item @yield('menuHome')"><a href={{url('/')}} class="nav-link">Beranda</a></li>
+                    <li class="nav-item @yield('menuAbout')"><a href={{url('tentangkami')}} class="nav-link">Tentang Kami</a></li>
+                    <li class="nav-item @yield('menuPaket')"><a href={{url('paketmakanan')}} class="nav-link">Paket Makanan</a></li>
+                    <li class="nav-item @yield('menuVoucher')"><a href={{url('voucher')}} class="nav-link">Voucher</a></li>
 
+                    @guest
+                    <li class="nav-item">
+                        @if (Route::has('login'))
+                        <a href="{{ route('login') }}" class="nav-link">Login</a>
+                        @endif
+                    </li>
+                    @endguest
+
+                    @auth
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
+                        </div>
+                    </li>
+                    @endauth
                 </ul>
             </div>
         </div>
@@ -57,7 +77,8 @@
     @yield('content')
 
     {{-- Fotter START --}}
-    <div class="container-fluid bg-pooter footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s" style="background-color: #f15d30;">
+    <div class="container-fluid bg-pooter footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s"
+        style="background-color: #f15d30;">
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-12">
@@ -94,5 +115,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="{{ asset('pacific/js/google-map.js') }}"></script>
     <script src="{{ asset('pacific/js/main.js') }}"></script>
+
 </body>
+
 </html>
