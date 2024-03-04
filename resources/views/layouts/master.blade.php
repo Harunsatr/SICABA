@@ -29,7 +29,9 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">SICABA<span>Katering Bu Aini</span></a>
+            <a class="navbar-brand" href="{{url('/')}}">
+                <img src="{{ asset('pacific/img/logoFix.png') }}" alt="SICABA" style="width: 80px; height: 80px;">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -40,15 +42,19 @@
                     <li class="nav-item @yield('menuAbout')"><a href={{url('tentangkami')}} class="nav-link">Tentang Kami</a></li>
                     <li class="nav-item @yield('menuPaket')"><a href={{url('paketmakanan')}} class="nav-link">Paket Makanan</a></li>
                     <li class="nav-item @yield('menuVoucher')"><a href={{url('voucher')}} class="nav-link">Voucher</a></li>
+                    <li class="nav-item @yield('menuTroli')">
+                        <a href="{{url('troli')}}" class="nav-link">
+                            <img src="{{ asset('pacific/img/keranjang.png') }}" alt="Troli" style="width: 25px; height: auto;">
+                        </a>
+                    </li>
 
                     @guest
-                    <li class="nav-item">
+                    <li class="nav-item @yield('menuLogin')">
                         @if (Route::has('login'))
                         <a href="{{ route('login') }}" class="nav-link">Login</a>
                         @endif
                     </li>
                     @endguest
-
                     @auth
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

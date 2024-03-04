@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
+@section('menuVoucher', 'active')
 @section('content')
-@section('menuHome', 'active')
 {{-- @section('menuVoucher', 'active') --}}
 
 {{-- Konten START --}}

@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
+
+@section('menuAbout', 'active')
 @section('content')
-@section('menuHome', 'active')
 
 {{-- Konten START --}}
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('pacific/img/bg_1.jpg');">
