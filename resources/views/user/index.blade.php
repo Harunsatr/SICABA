@@ -7,10 +7,10 @@
     <div class="hero-wrap js-fullheight" style="background-image: url('pacific/img/destination-5.jpg');">
         <div class="overlay"></div>
         <div class="container">
-            <div class="row no-gutters slider-text js-fullhei   ght align-items-center" data-scrollax-parent="true">
+            <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
                 <div class="col-md-7 ftco-animate">
                     <span class="subheading">Selamat Datang</span>
-                    <h1 class="mb-4">Katering Bu Aini</h1>
+                    <h1 class="mb-4">Katering Bu aini</h1>
                     <p class="caps">Menyediakan paket makanan untuk melengkapi acara anda </p>
                 </div>
                 <a href="https://vimeo.com/45830194"
@@ -222,7 +222,7 @@
                             <div class="services services-1 color-1 d-block img"
                                 style="background-image: url('pacific/img/services-1.jpg');">
                                 <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="ti ti-archive"></span></div>
+                                        class="flaticon-paragliding"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Paket</h3>
                                     <p>Lorem ipsum dolor sit amet</p>
@@ -539,7 +539,7 @@
                         <div class="col-sm-6 col-md-3 mb-6">
                             <div class="text-center"><img class="shadow-icon" src="pacific/img/pay.png" height="112"
                                     alt="..." />
-                                <h5 class="mt-4 fw-bold">Pembayaran</h5>
+                                <h5 class="mt-4 fw-bold">Proses Pembayaran</h5>
                                 <p class="mb-md-0">Pilih pembayaran anda sesuai keinginan</p>
                             </div>
                         </div>
