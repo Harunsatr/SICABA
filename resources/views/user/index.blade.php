@@ -7,10 +7,10 @@
     <div class="hero-wrap js-fullheight" style="background-image: url('pacific/img/destination-5.jpg');">
         <div class="overlay"></div>
         <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+            <div class="row no-gutters slider-text js-fullhei   ght align-items-center" data-scrollax-parent="true">
                 <div class="col-md-7 ftco-animate">
                     <span class="subheading">Selamat Datang</span>
-                    <h1 class="mb-4">Katering Bu aini</h1>
+                    <h1 class="mb-4">Katering Bu Aini</h1>
                     <p class="caps">Menyediakan paket makanan untuk melengkapi acara anda </p>
                 </div>
                 <a href="https://vimeo.com/45830194"
@@ -201,7 +201,7 @@
             <div class="row d-flex">
                 <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
                     <div class="w-100">
-                        <span class="subheading">Selamat Datang</span>
+                        <span class="subheading">Katering Bu Aini</span>
                         <h2 class="mb-4">
                             Pesan paket katering anda mulai sekarang</h2>
                         <p>Biarkan kami mengurus segalanya! Dari persiapan hingga pembersihan, kami hadir untuk membuat
@@ -222,7 +222,7 @@
                             <div class="services services-1 color-1 d-block img"
                                 style="background-image: url('pacific/img/services-1.jpg');">
                                 <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-paragliding"></span></div>
+                                        class="ti ti-archive"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Paket</h3>
                                     <p>Lorem ipsum dolor sit amet</p>
@@ -462,6 +462,7 @@
     </section>
     {{-- Daftar Paket END --}}
 
+
     {{-- Video START --}}
     <section class="ftco-section ftco-about img"style="background-image: url('pacific/img/bg_4.jpg');">
         <div class="overlay"></div>
@@ -514,7 +515,7 @@
 
     {{-- Cara memesan START --}}
     <section>
-        <div class="container mb-5">
+        <div class="container mt-5">
             <div class="row justify-content-center g-0">
                 <div class="col-xl-9">
                     <div class="col-lg-6 text-center mx-auto mb-3 mb-md-5 mt-4">
@@ -538,7 +539,7 @@
                         <div class="col-sm-6 col-md-3 mb-6">
                             <div class="text-center"><img class="shadow-icon" src="pacific/img/pay.png" height="112"
                                     alt="..." />
-                                <h5 class="mt-4 fw-bold">Proses Pembayaran</h5>
+                                <h5 class="mt-4 fw-bold">Pembayaran</h5>
                                 <p class="mb-md-0">Pilih pembayaran anda sesuai keinginan</p>
                             </div>
                         </div>
@@ -557,7 +558,7 @@
     {{-- Cara memesan END --}}
 
     {{-- Testimonial START --}}
-    <section class="ftco-section testimony-section bg-bottom" style="background-image: url('pacific/img/bg_1.jpg');">
+    {{-- <section class="ftco-section testimony-section bg-bottom" style="background-image: url('pacific/img/bg_1.jpg');">
         <div class="container">
             <div class="row justify-content-center pb-4">
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -687,7 +688,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     {{-- Testimonial END --}}
 
     {{-- menu pesanan custom START --}}
@@ -697,9 +698,9 @@
                 <div class="col-md-12 text-center">
                     <div class="img" style="background-image: url('pacific/img/bg_2.jpg');">
                         <div class="overlay"></div>
-                        <h2>We Are Pacific A Travel Agency</h2>
-                        <p>We can manage your dream building A small river named Duden flows by their place</p>
-                        <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+                        <h2>MAU PESAN SESUAI KEINGINAN?</h2>
+                        <p>Kami dapat menyesuaikan pesanan dengan keinginan anda</p>
+                        <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Request pesanan</a></p>
                     </div>
                 </div>
             </div>

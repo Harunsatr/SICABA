@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- Konten START --}}
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('pacific/img/bg_1.jpg');">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('pacific/img/destination-5.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">

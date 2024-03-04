@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" href="{{ asset('pacific/img/logoFix.png') }}" type="image/x-icon">
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
@@ -24,7 +26,6 @@
     <link rel="stylesheet" href="{{ asset('pacific/css/flaticon.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('pacific/css/style.css') }}" rel="stylesheet">
 
-</head>
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -83,11 +84,11 @@
     @yield('content')
 
     {{-- Fotter START --}}
-    <div class="container-fluid bg-pooter footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s"
-        style="background-color: #f15d30;">
+    <div class="container-fluid bg-pooter footer pt-0 mt-02 wow fadeIn" data-wow-delay="0.1s"
+        style="background-color: #D6613D;">
         <div class="container text-center">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 mt-2">
                     <p class="colornew"> &copy; <span class="colornew">2023 SICABA | Katering Bu Aini</span>
                     </p>
                 </div>
@@ -122,6 +123,13 @@
     <script src="{{ asset('pacific/js/google-map.js') }}"></script>
     <script src="{{ asset('pacific/js/main.js') }}"></script>
 
+    {{-- SVG --}}
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+        <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+        <path d="M10 12l4 0" />
+    </svg>
 </body>
 
 </html>
