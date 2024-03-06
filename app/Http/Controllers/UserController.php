@@ -30,4 +30,7 @@ class UserController extends Controller
     {
         return view('user.tentangkami');
     }
+    public function haladmin() {
+        return view('admin.billing');
+    }
 }

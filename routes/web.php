@@ -35,7 +35,8 @@ Route::get('/paketmakanan', [MakananController::class, 'paketmakanan'])->name('p
 Route::get('/voucher', [VoucherController::class, 'voucher'])->name('voucher');
 Route::get('troli', [MakananController::class, 'troli'])->name('troli');
 
-
+// Admin
+Route::get('/haladmin', [UserController::class, 'haladmin'])->name('haladmin');
 
 // Profile routes
 Route::middleware('auth')->group(function () {
