@@ -54,7 +54,7 @@
     <body class="g-sidenav-show  bg-gray-100">
         <section class="min-vh-100 mb-8">
             <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
-                style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+                style="background-image: url({{asset('softui/img/curved-images/curved14.jpg')}});">
                 <span class="mask bg-gradient-dark opacity-6"></span>
                 <div class="container">
                     <div class="row justify-content-center">
