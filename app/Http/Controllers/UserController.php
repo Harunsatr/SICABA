@@ -33,7 +33,4 @@ class UserController extends Controller
     public function haladmin() {
         return view('admin.billing');
     }
-    public function loginuseradmin() {
-        return view('login.sign');
-    }
 }
