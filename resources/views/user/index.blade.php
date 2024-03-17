@@ -223,8 +223,8 @@
                                 <div class="icon d-flex align-items-center justify-content-center"><span
                                         class="flaticon-paragliding"></span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Paket</h3>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <h3 class="heading mb-3">Paket Ulang Tahun</h3>
+                                    <p>Siap menemani acara ulang tahun Anda</p>
                                 </div>
                             </div>
                         </div>
@@ -234,8 +234,8 @@
                                 <div class="icon d-flex align-items-center justify-content-center"><span
                                         class="flaticon-route"></span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Paket</h3>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <h3 class="heading mb-3">Paket Nasi Kuning</h3>
+                                    <p>Siap menemani acara hajatan Anda</p>
                                 </div>
                             </div>
                         </div>
@@ -245,8 +245,8 @@
                                 <div class="icon d-flex align-items-center justify-content-center"><span
                                         class="flaticon-tour-guide"></span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Paket</h3>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <h3 class="heading mb-3">Paket Nasi Ayam</h3>
+                                    <p>Siap menemani acara gathering Anda</p>
                                 </div>
                             </div>
                         </div>
@@ -256,8 +256,8 @@
                                 <div class="icon d-flex align-items-center justify-content-center"><span
                                         class="flaticon-map"></span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Paket</h3>
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <h3 class="heading mb-3">Paket Nasi Kotak</h3>
+                                    <p>Siap menemani acara meeting Anda</p>
                                 </div>
                             </div>
                         </div>
