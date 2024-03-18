@@ -202,10 +202,10 @@
                             <input type="text" class="form-control" placeholder="Subyek">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Pesan"></textarea>
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Saran yang ingin Disampaikan"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Kirim Pesan" class="btn btn-primary py-3 px-5">
+                            <input type="submit" value="Kirim Saran" class="btn btn-primary py-3 px-5">
                         </div>
                     </form>
 
