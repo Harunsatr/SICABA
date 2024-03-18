@@ -1,4 +1,7 @@
+@extends('layouts.master')
 
+@section('menuLogin', 'active')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,5 +273,6 @@
     </body>
     
     </html>
-    
+
+    @endsection
 
