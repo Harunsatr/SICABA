@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.logregist-master')
 
 @section('menuLogin', 'active')
 @section('content')
