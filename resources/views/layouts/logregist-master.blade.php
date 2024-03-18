@@ -33,6 +33,7 @@
         #nav-voucher,
         #menu-button {
             color: #000 !important;
+            font-style: bold;
         }
     </style>
 </head>
