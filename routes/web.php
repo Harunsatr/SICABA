@@ -36,6 +36,9 @@ Route::get('/paketmakanan', [MakananController::class, 'paketmakanan'])->name('p
 Route::get('/voucher', [VoucherController::class, 'voucher'])->name('voucher');
 Route::get('troli', [MakananController::class, 'troli'])->name('troli');
 
+// Route Google
+Route::get('/home', [UserController::class, 'index'])->name('home');
+
 // Admin
 Route::get('/haladmin', [UserController::class, 'haladmin'])->name('haladmin');
 

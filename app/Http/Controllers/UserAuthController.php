@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\Schema;
+use App\Http\Controllers\Blueprint;
+use App\Http\Controllers\QueryException;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -61,4 +64,58 @@ public function logout(Request $request)
 
     return redirect('/');
 }
+
+public function up()
+{
+    Schema::table('users', function (Blueprint $table) {
+        $table->string('provider_id')->nullable()->after('password');
+    });
+}
+
+public function down()
+{
+    Schema::table('users', function (Blueprint $table) {
+        $table->dropColumn('provider_id');
+    });
+}
+
+// login google
+public function register(Request $request)
+{
+    // Validasi data dari request
+    $validatedData = $request->validate([
+        'email' => 'required|email|unique:users,email',
+        // Tambahkan aturan validasi lainnya di sini
+    ]);
+}
+
+public function register(Request $request)
+{
+    try {
+        // Validasi data masukan
+        $validatedData = $request->validate([
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6',
+            // Tambahkan aturan validasi lainnya di sini
+        ]);
+
+        // Simpan data ke dalam database
+        $user = new User();
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password); // Encrypt password sebelum disimpan
+        // Tambahkan kolom lain jika diperlukan
+        $user->save();
+
+        // Jika berhasil, lanjutkan dengan tindakan selanjutnya
+        // Misalnya, arahkan pengguna ke halaman tertentu atau kirimkan pesan berhasil
+    } catch (QueryException $e) {
+        // Kesalahan jika ada duplikasi entri
+        if ($e->errorInfo[1] == 1062) {
+            return redirect()->back()->withInput()->withErrors(['email' => 'Email sudah digunakan.']);
+        } else {
+            // Tangani kesalahan lainnya
+        }
+    }
+}
+
 }
