@@ -30,7 +30,8 @@
         #nav-beranda,
         #nav-tentang,
         #nav-paket,
-        #nav-voucher {
+        #nav-voucher,
+        #menu-button {
             color: #000 !important;
         }
     </style>
@@ -42,7 +43,7 @@
             <a class="navbar-brand" href="{{url('/')}}">
                 <img src="{{ asset('pacific/img/logoFix.png') }}" alt="SICABA" style="width: 80px; height: 80px;">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
                 <span class="oi oi-menu"></span> Menu
             </button>
 
