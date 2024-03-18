@@ -2,7 +2,12 @@
 
 @section('menuLogin', 'active')
 @section('content')
-
+<style>
+    .submit-btn {
+        background-color: #D6613D !important;
+        color: white !important;
+    }
+</style>
 <section class="min-vh-100 mb-8">
     <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
         style="background-image: url({{ asset('pacific/img/ftmakanan26.png') }});">
@@ -102,7 +107,7 @@
                                     aria-describedby="password-addon" name="password" id="password">
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign
+                                <button type="submit" class="submit-btn btn w-100 my-4 mb-2">Sign
                                     in</button>
                             </div>
                             <p class="text-sm mt-3 mb-0">Belum mempunyai akun? <a href={{ route('register') }}

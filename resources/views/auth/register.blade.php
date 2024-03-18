@@ -12,6 +12,12 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+        .register-btn {
+            background-color: #D6613D !important;
+            color: white !important;
+        }
+    </style>
 
 </head><!--
     =========================================================
@@ -54,8 +60,8 @@
     <body class="g-sidenav-show  bg-gray-100">
         <section class="min-vh-100 mb-8">
             <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
-                style="background-image: url({{asset('softui/img/curved-images/curved14.jpg')}});">
-                <span class="mask bg-gradient-dark opacity-6"></span>
+                style="background-image: url({{asset('pacific/img/ftmakanan26.png')}});">
+                <span class="mask opacity-6"></span>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-5 text-center mx-auto">
@@ -179,7 +185,7 @@
                                     <div class="flex items-center justify-end mt-4">
                                         <a href="{{ route('login') }}" class="text-sm text-gray-600 underline">Already registered?</a>
                                 
-                                        <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Register</button>
+                                        <button type="submit" class="register-btn btn w-100 my-4 mb-2">Register</button>
                                     </div>
                                 </form>                                                              
                             </div>
