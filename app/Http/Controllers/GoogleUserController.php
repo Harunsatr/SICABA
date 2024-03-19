@@ -3,21 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\GoogleUser; // Pastikan Anda telah membuat model Eloquent yang sesuai
+use App\Models\GoogleUser;
 
 class GoogleUserController extends Controller
 {
     public function store(Request $request)
     {
-        // Contoh: menyimpan data pengguna saat pertama kali login
+        $email = $request->input('email');
+
+        // Check if user with the same email already exists
+        $existingUser = GoogleUser::where('email', $email)->first();
+
+        // If user already exists, return the existing user
+        if ($existingUser) {
+            return response()->json($existingUser, 200);
+        }
+
+        // If user doesn't exist, create a new user
         $user = new GoogleUser();
         $user->google_id = $request->input('google_id');
         $user->name = $request->input('name');
-        $user->email = $request->input('email');
+        $user->email = $email;
         $user->save();
 
         return response()->json($user, 201);
     }
 
-    // Anda dapat menambahkan metode lain sesuai kebutuhan, seperti untuk menampilkan informasi pengguna
+    // Other methods can be added as needed, such as for displaying user information
 }
