@@ -25,9 +25,14 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+// Route::get('/paketmakanan', function () {
+//     return view('user.paketmakanan');
+// })->middleware(['auth'])->name('paketmakanan');
+
 
 // User routes
 Route::get('/', [UserController::class, 'index'])->name('index');
@@ -71,7 +76,7 @@ Route::get('/orders', function () {
     return view('admin.orders');
 })->middleware(['auth', 'verified', 'role:admin']);
 
-Route::get('/voucher', function () {
+Route::get('/vouchers', function () {
     return view('admin.voucher');
 })->middleware(['auth', 'verified', 'role:admin']);
 
