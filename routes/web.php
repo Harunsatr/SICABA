@@ -39,8 +39,6 @@ Route::get('troli', [MakananController::class, 'troli'])->name('troli');
 // Route Google
 Route::get('/home', [UserController::class, 'index'])->name('home');
 
-// Admin
-Route::get('/haladmin', [UserController::class, 'haladmin'])->name('haladmin');
 
 // Profile routes
 Route::middleware('auth')->group(function () {
@@ -54,9 +52,31 @@ Route::middleware('guest')->group(function () {
     Route::get('/auth/google/redirect', [UserAuthController::class, 'redirect'])->name('auth.google.login');
     Route::get('/auth/google/callback', [UserAuthController::class, 'handleGoogleCallback']);
     });
+
+
 // Admin route
-Route::get('/admin', function () {
-    return view('admin');
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/product', function () {
+    return view('admin.product');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/payment', function () {
+    return view('admin.payment');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/orders', function () {
+    return view('admin.orders');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/voucher', function () {
+    return view('admin.voucher');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/users', function () {
+    return view('admin.users');
 })->middleware(['auth', 'verified', 'role:admin']);
 
 require __DIR__.'/auth.php';
