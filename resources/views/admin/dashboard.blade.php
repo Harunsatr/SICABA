@@ -37,7 +37,7 @@
                                     </form>
                                 </li>
                             </ul>
-                        </div>                        
+                        </div>
                         {{-- <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                                 <div class="sidenav-toggler-inner">
@@ -256,7 +256,7 @@
                                 </div>
                                 <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
                                     <div class="bg-gradient-primary border-radius-lg h-100">
-                                        <img src="../assets/img/shapes/waves-white.svg"
+                                        <img src="{{ asset('softui/img/shapes/waves-ehite.svg') }}"
                                             class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
                                             alt="waves">
                                         <div
@@ -880,4 +880,4 @@
                     </div>
                 </div>
             </div>
-@endsection   
+@endsection

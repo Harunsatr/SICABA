@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="{{ asset('pacific/css/bootstrap-datepicker.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('pacific/css/jquery.timepicker.css') }}" rel="stylesheet">
 
-
     <link rel="stylesheet" href="{{ asset('pacific/css/flaticon.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('pacific/css/style.css') }}" rel="stylesheet">
+    
 
     <style>
 
