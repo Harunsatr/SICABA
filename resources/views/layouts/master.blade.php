@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="{{ asset('pacific/css/flaticon.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('pacific/css/style.css') }}" rel="stylesheet">
-    
+
 
     <style>
 
@@ -106,7 +106,7 @@
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4"
                 stroke="#eeeeee" />
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4"
-                stroke-miterlimit="10" stroke="#F96D00" />
+                stroke-miterlimit="10" stroke="#F96D00">
         </svg></div>
     {{-- Loader END --}}
 

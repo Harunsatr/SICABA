@@ -118,10 +118,6 @@
         <div class="container py-md-5">
             <div class="row py-md-5">
                 <div class="col-md d-flex align-items-center justify-content-center">
-                    <a href="https://vimeo.com/45830194"
-                        class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-                        <span class="fa fa-play"></span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -171,8 +167,8 @@
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-map-marker"></span>
                         </div>
-                        <h3 class="mb-2">Address</h3>
-                        <p>Jombang Street II Number 19, Malang</p>
+                        <h3 class="mb-2">Alamat</h3>
+                        <p><a href="tel://1234567920">Jl. Jombang II No. 19, Malang, Jawa Timur </a></p>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
@@ -180,7 +176,7 @@
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-phone"></span>
                         </div>
-                        <h3 class="mb-2">Contact Number</h3>
+                        <h3 class="mb-2">No WA</h3>
                         <p><a href="tel://1234567920">+ 62 812 1795 2403</a></p>
                     </div>
                 </div>
@@ -189,7 +185,7 @@
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-paper-plane"></span>
                         </div>
-                        <h3 class="mb-2">Email Address</h3>
+                        <h3 class="mb-2">Email</h3>
                         <p><a href="mailto:info@yoursite.com">sicaba@gmail.com</a></p>
                     </div>
                 </div>
@@ -213,10 +209,10 @@
                 <div class="col-md-6 order-md-last d-flex">
                     <form action="#" class="bg-light p-5 contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nama Anda">
+                            <input type="text" class="form-control" placeholder="Nama">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email Anda">
+                            <input type="text" class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Subyek">

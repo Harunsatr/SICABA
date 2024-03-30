@@ -19,21 +19,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
-
-// Route::get('/paketmakanan', function () {
-//     return view('user.paketmakanan');
-// })->middleware(['auth'])->name('paketmakanan');
-
-
 // User routes
 Route::get('/', [UserController::class, 'index'])->name('index');
 Route::get('/tentangkami', [UserController::class, 'tentangkami'])->name('tentangkami');
@@ -60,16 +45,16 @@ Route::middleware('guest')->group(function () {
 
 
 // Admin route
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+Route::get('/beranda', function () {
+    return view('admin.beranda');
 })->middleware(['auth', 'verified', 'role:admin']);
 
-Route::get('/product', function () {
-    return view('admin.product');
+Route::get('/produk', function () {
+    return view('admin.produk');
 })->middleware(['auth', 'verified', 'role:admin']);
 
-Route::get('/payment', function () {
-    return view('admin.payment');
+Route::get('/pembayaran', function () {
+    return view('admin.pembayaran');
 })->middleware(['auth', 'verified', 'role:admin']);
 
 Route::get('/orders', function () {

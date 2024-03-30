@@ -14,7 +14,7 @@
                                 href="javascript:;">Pages</a></li>
                         <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Users</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Users</h6>
+                    <h6 class="font-weight-bolder mb-0">User</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -38,7 +38,7 @@
                                     </form>
                                 </li>
                             </ul>
-                        </div>                        
+                        </div>
                         {{-- <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                                 <div class="sidenav-toggler-inner">
