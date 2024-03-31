@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminUsersController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MakananController;
 use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\UserAuthController;
+use App\Http\Controllers\Admin\UsersController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,6 +47,10 @@ Route::get('troli', [MakananController::class, 'troli'])->name('troli');
 // Route Google
 Route::get('/home', [UserController::class, 'index'])->name('home');
 
+// Route CRUD Users
+Route::resource('admin/users', 'AdminUserController');
+Route::get('/admin/users', 'AdminUserController@index')->name('admin.users.index');
+Route::get('/admin/users/create', 'AdminUserController@create')->name('admin.users.create');
 
 // Profile routes
 Route::middleware('auth')->group(function () {
@@ -56,32 +63,16 @@ Route::middleware('auth')->group(function () {
 Route::middleware('guest')->group(function () {
     Route::get('/auth/google/redirect', [UserAuthController::class, 'redirect'])->name('auth.google.login');
     Route::get('/auth/google/callback', [UserAuthController::class, 'handleGoogleCallback']);
-    });
+});
 
+// Admin routes
+Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard.index');
+    Route::get('/create', [AdminUsersController::class, 'create'])->name('admin.users.create');
+    Route::post('/admin/users', [AdminUsersController::class, 'store'])->name('admin.users.store');
+    Route::get('/users', [AdminUsersController::class, 'index'])->name('admin.users.index');
+    Route::get('/users/{id}/edit', [AdminUsersController::class, 'edit'])->name('admin.users.edit');
+    Route::delete('/admin/users/{user}', [AdminUsersController::class, 'destroy'])->name('admin.users.destroy');
+});
 
-// Admin route
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/product', function () {
-    return view('admin.product');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/payment', function () {
-    return view('admin.payment');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/orders', function () {
-    return view('admin.orders');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/vouchers', function () {
-    return view('admin.voucher');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/users', function () {
-    return view('admin.users');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
