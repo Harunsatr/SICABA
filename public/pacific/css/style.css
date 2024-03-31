@@ -7707,6 +7707,11 @@ button.bg-dark:focus {
     border: 0;
 }
 
+.ukuran-ikon {
+    width: 500px;
+    height: 500px;
+}
+
 .embed-responsive-21by9::before {
     padding-top: 42.85714%;
 }

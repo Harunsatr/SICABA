@@ -19,6 +19,7 @@ class AddDefaultPasswordToUsersTable extends Migration
             // Anda bisa mengembalikan perubahan skema yang dilakukan di metode up() di sini, jika perlu
         });
     }
+    
 }
 
 ;

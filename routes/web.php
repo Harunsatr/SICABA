@@ -22,21 +22,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
-
-// Route::get('/paketmakanan', function () {
-//     return view('user.paketmakanan');
-// })->middleware(['auth'])->name('paketmakanan');
-
-
 // User routes
 Route::get('/', [UserController::class, 'index'])->name('index');
 Route::get('/tentangkami', [UserController::class, 'tentangkami'])->name('tentangkami');
@@ -75,4 +60,33 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::delete('/admin/users/{user}', [AdminUsersController::class, 'destroy'])->name('admin.users.destroy');
 });
 
+<<<<<<< HEAD
 require __DIR__ . '/auth.php';
+=======
+// Admin route
+Route::get('/beranda', function () {
+    return view('admin.beranda');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/produk', function () {
+    return view('admin.produk');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/pembayaran', function () {
+    return view('admin.pembayaran');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/orders', function () {
+    return view('admin.orders');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/vouchers', function () {
+    return view('admin.voucher');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+Route::get('/users', function () {
+    return view('admin.users');
+})->middleware(['auth', 'verified', 'role:admin']);
+
+require __DIR__.'/auth.php';
+>>>>>>> 0243b4b2c13155147af5e1698059180e3492e542

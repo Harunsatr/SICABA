@@ -1,6 +1,6 @@
 @extends('layouts.sidebaradmin')
 
-@section('menuPayment', 'active')
+@section('menuProduk', 'active')
 @section('content')
 
     <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
@@ -11,10 +11,10 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark"
-                                href="javascript:;">Pages</a></li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Payment</li>
+                                href="javascript:;">Halaman</a></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Produk</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Payment</h6>
+                    <h6 class="font-weight-bolder mb-0">Produk</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -38,7 +38,7 @@
                                     </form>
                                 </li>
                             </ul>
-                        </div>                        
+                        </div>
                         {{-- <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                                 <div class="sidenav-toggler-inner">
@@ -174,7 +174,7 @@
                                             <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <img src="../assets/img/team-2.jpg"
+                                                        <img src="{{ asset('softui/img/team-2.jpg') }}"
                                                             class="avatar avatar-sm me-3" alt="user1">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
@@ -205,7 +205,7 @@
                                             <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <img src="../assets/img/team-3.jpg"
+                                                        <img src="{{ asset('softui/img/team-3.jpg') }}"
                                                             class="avatar avatar-sm me-3" alt="user2">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
@@ -236,7 +236,7 @@
                                             <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <img src="../assets/img/team-4.jpg"
+                                                        <img src="{{ asset('softui/img/team-4.jpg') }}"
                                                             class="avatar avatar-sm me-3" alt="user3">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
@@ -267,7 +267,7 @@
                                             <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <img src="../assets/img/team-3.jpg"
+                                                        <img src="{{ asset('softui/img/team-3.jpg') }}"
                                                             class="avatar avatar-sm me-3" alt="user4">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
@@ -298,7 +298,7 @@
                                             <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <img src="../assets/img/team-2.jpg"
+                                                        <img src="{{ asset('softui/img/team-1.jpg') }}"
                                                             class="avatar avatar-sm me-3" alt="user5">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
@@ -329,7 +329,7 @@
                                             <td>
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <img src="../assets/img/team-4.jpg"
+                                                        <img src="{{ asset('softui/img/team-4.jpg') }}"
                                                             class="avatar avatar-sm me-3" alt="user6">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
@@ -394,7 +394,7 @@
                                             <td>
                                                 <div class="d-flex px-2">
                                                     <div>
-                                                        <img src="../assets/img/small-logos/logo-spotify.svg"
+                                                        <img src="{{ asset('softui/img/small-logos/logo-spotify.svg') }}"
                                                             class="avatar avatar-sm rounded-circle me-2"
                                                             alt="spotify">
                                                     </div>
@@ -432,7 +432,7 @@
                                             <td>
                                                 <div class="d-flex px-2">
                                                     <div>
-                                                        <img src="../assets/img/small-logos/logo-invision.svg"
+                                                        <img src="{{ asset('softui/img/small-logos/logo-invision.svg') }}"
                                                             class="avatar avatar-sm rounded-circle me-2"
                                                             alt="invision">
                                                     </div>
@@ -471,7 +471,7 @@
                                             <td>
                                                 <div class="d-flex px-2">
                                                     <div>
-                                                        <img src="../assets/img/small-logos/logo-jira.svg"
+                                                        <img src="{{ asset('softui/img/small-logos/logo-jira.svg') }}"
                                                             class="avatar avatar-sm rounded-circle me-2"
                                                             alt="jira">
                                                     </div>
@@ -510,7 +510,7 @@
                                             <td>
                                                 <div class="d-flex px-2">
                                                     <div>
-                                                        <img src="../assets/img/small-logos/logo-slack.svg"
+                                                        <img src="{{ asset('softui/img/small-logos/logo-slack.svg') }}"
                                                             class="avatar avatar-sm rounded-circle me-2"
                                                             alt="slack">
                                                     </div>
@@ -549,7 +549,7 @@
                                             <td>
                                                 <div class="d-flex px-2">
                                                     <div>
-                                                        <img src="../assets/img/small-logos/logo-webdev.svg"
+                                                        <img src="{{ asset('softui/img/small-logos/logo-webdev.svg') }}"
                                                             class="avatar avatar-sm rounded-circle me-2"
                                                             alt="webdev">
                                                     </div>
@@ -588,7 +588,7 @@
                                             <td>
                                                 <div class="d-flex px-2">
                                                     <div>
-                                                        <img src="../assets/img/small-logos/logo-xd.svg"
+                                                        <img src="{{ asset('softui/img/small-logos/logo-xd.svg') }}"
                                                             class="avatar avatar-sm rounded-circle me-2"
                                                             alt="xd">
                                                     </div>

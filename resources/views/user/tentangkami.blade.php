@@ -17,7 +17,8 @@
         </div>
     </section>
     {{-- Konten START --}}
-    {{-- Paket Makanan START --}}
+
+   {{-- Paket Makanan START --}}
     <section class="ftco-section services-section">
         <div class="container">
             <div class="row d-flex">
@@ -43,47 +44,66 @@
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1  d-block img"
                                 style="background-image: url('pacific/img/ftmakanan1.png');">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-paragliding"></span></div>
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span
+                                    class="fi fi-tr-cake-birthday">
+                                    </span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Paket Ulang Tahun</h3>
                                     <p>Siap menemani acara ulang tahun Anda</p>
                                 </div>
                             </div>
                         </div>
+
+                        {{-- Icon link  --}}
+                        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1  d-block img"
                                 style="background-image: url('pacific/img/ftmakanan2.png');">
                                 <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-route"></span></div>
+                                        class="fi fi-ts-restaurant"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Paket Nasi Kuning</h3>
                                     <p>Siap menemani acara hajatan Anda</p>
                                 </div>
                             </div>
                         </div>
+
+                        {{-- Icon Link --}}
+                        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1  d-block img"
                                 style="background-image: url('pacific/img/ftmakanan27.png');">
                                 <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-tour-guide"></span></div>
+                                        class="fi fi-tr-hamburger-soda"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Paket Nasi Ayam</h3>
                                     <p>Siap menemani acara gathering Anda</p>
                                 </div>
                             </div>
                         </div>
+
+                        {{-- Icon link --}}
+                        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+
+
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1  d-block img"
                                 style="background-image: url('pacific/img/ftmakanan28.png');">
                                 <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="flaticon-map"></span></div>
+                                        class="fi fi-rs-room-service"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Paket Nasi Kotak</h3>
                                     <p>Siap menemani acara meeting Anda</p>
                                 </div>
                             </div>
                         </div>
+
+                        {{-- Icon link --}}
+                        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+
                     </div>
                 </div>
             </div>
@@ -98,10 +118,6 @@
         <div class="container py-md-5">
             <div class="row py-md-5">
                 <div class="col-md d-flex align-items-center justify-content-center">
-                    <a href="https://vimeo.com/45830194"
-                        class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-                        <span class="fa fa-play"></span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -151,8 +167,8 @@
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-map-marker"></span>
                         </div>
-                        <h3 class="mb-2">Address</h3>
-                        <p>Jombang Street II Number 19, Malang</p>
+                        <h3 class="mb-2">Alamat</h3>
+                        <p><a href="tel://1234567920">Jl. Jombang II No. 19, Malang, Jawa Timur </a></p>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
@@ -160,7 +176,7 @@
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-phone"></span>
                         </div>
-                        <h3 class="mb-2">Contact Number</h3>
+                        <h3 class="mb-2">No WA</h3>
                         <p><a href="tel://1234567920">+ 62 812 1795 2403</a></p>
                     </div>
                 </div>
@@ -169,7 +185,7 @@
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-paper-plane"></span>
                         </div>
-                        <h3 class="mb-2">Email Address</h3>
+                        <h3 class="mb-2">Email</h3>
                         <p><a href="mailto:info@yoursite.com">sicaba@gmail.com</a></p>
                     </div>
                 </div>
@@ -193,10 +209,10 @@
                 <div class="col-md-6 order-md-last d-flex">
                     <form action="#" class="bg-light p-5 contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nama Anda">
+                            <input type="text" class="form-control" placeholder="Nama">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email Anda">
+                            <input type="text" class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Subyek">

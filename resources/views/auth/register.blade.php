@@ -43,9 +43,10 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-5 text-center mx-auto">
-                            <h1 class="text-white mb-2 mt-5">Welcome!</h1>
-                            <p class="text-lead text-white">Use these awesome forms to login or create new account in your
-                                project for free.</p>
+                            <h1 class="text-white mb-2 mt-5">Selamat Datang</h1>
+                            <p class="text-lead text-white">
+                                Silahkan login terlebih dahulu untuk mengakses website kami
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +56,7 @@
                     <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                         <div class="card z-index-0">
                             <div class="card-header text-center pt-4">
-                                <h5>Register</h5>
+                                <h5>Daftar Akun</h5>
                             </div>
                             <div class="card-body">
                                 <form method="POST" action="{{ route('register') }}">
@@ -91,9 +92,9 @@
                                     </div>
 
                                     <div class="flex items-center justify-end mt-4">
-                                        <a href="{{ route('login') }}" class="text-sm text-gray-600 underline">Already registered?</a>
+                                        <a href="{{ route('login') }}" class="text-sm text-gray-600 underline">Sudah Terdaftar?</a>
 
-                                        <button type="submit" class="register-btn btn w-100 my-4 mb-2">Register</button>
+                                        <button type="submit" class="register-btn btn w-100 my-4 mb-2">Daftar</button>
                                     </div>
                                 </form>
                             </div>

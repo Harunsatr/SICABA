@@ -64,11 +64,13 @@ class UserAuthController extends Controller
     {
         try {
             $validatedData = $request->validate([
+                'name' => 'required',
                 'email' => 'required|email|unique:users,email',
                 'password' => 'required|min:6',
             ]);
 
             $user = new User();
+            $user->name = $request->name;
             $user->email = $request->email;
             $user->password = bcrypt($request->password);
             $user->save();
