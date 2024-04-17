@@ -1,13 +1,15 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminUsersController;
+use App\Http\Controllers\Admin\AdminProductsController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MakananController;
 use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\UserAuthController;
-use App\Http\Controllers\Admin\UsersController;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,6 +39,11 @@ Route::resource('admin/users', 'AdminUserController');
 Route::get('/admin/users', 'AdminUserController@index')->name('admin.users.index');
 Route::get('/admin/users/create', 'AdminUserController@create')->name('admin.users.create');
 
+// Route CRUD Products
+Route::resource('products', 'ProductController');
+Route::get('products', 'ProductController@index')->name('admin.products.index');
+Route::get('products/create', 'ProductController@create')->name('admin.products.create');
+
 // Profile routes
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -60,33 +67,23 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::delete('/admin/users/{user}', [AdminUsersController::class, 'destroy'])->name('admin.users.destroy');
 });
 
-<<<<<<< HEAD
+Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
+    Route::get('/products', [AdminProductsController::class, 'index'])->name('admin.products.index');
+    Route::get('/products/create', [AdminProductsController::class, 'create'])->name('admin.products.create');
+    Route::post('/products', [AdminProductsController::class, 'store'])->name('admin.products.store');
+    Route::get('/products/{id}/edit', [AdminProductsController::class, 'edit'])->name('admin.products.edit');
+    Route::put('/products/{id}', [AdminProductsController::class, 'update'])->name('admin.products.update');
+    Route::delete('/products/{id}', [AdminProductsController::class, 'destroy'])->name('admin.products.destroy');
+});
+
+Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
+    Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
+    Route::get('/products/create', [ProductController::class, 'create'])->name('admin.products.create');
+    Route::post('/products', [ProductController::class, 'store'])->name('admin.products.store');
+    Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
+    Route::put('/products/{id}', [ProductController::class, 'update'])->name('admin.products.update');
+    Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
+});
+
+
 require __DIR__ . '/auth.php';
-=======
-// Admin route
-Route::get('/beranda', function () {
-    return view('admin.beranda');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/produk', function () {
-    return view('admin.produk');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/pembayaran', function () {
-    return view('admin.pembayaran');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/orders', function () {
-    return view('admin.orders');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/vouchers', function () {
-    return view('admin.voucher');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-Route::get('/users', function () {
-    return view('admin.users');
-})->middleware(['auth', 'verified', 'role:admin']);
-
-require __DIR__.'/auth.php';
->>>>>>> 0243b4b2c13155147af5e1698059180e3492e542
