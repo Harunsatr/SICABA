@@ -95,6 +95,6 @@ class AdminProductsController extends Controller
         }
         $product->delete();
 
-        return redirect()->to('products')->with('success', 'User deleted successfully.');
+        return redirect()->route('admin.products.index')->with('success', 'Produk berhasil dihapus');
     }
 }
