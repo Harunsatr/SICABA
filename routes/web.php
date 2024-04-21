@@ -38,9 +38,9 @@ Route::get('/admin/users', 'AdminUserController@index')->name('admin.users.index
 Route::get('/admin/users/create', 'AdminUserController@create')->name('admin.users.create');
 
 // Route CRUD Products
-Route::resource('products', 'ProductController');
-Route::get('products', 'ProductController@index')->name('admin.products.index');
-Route::get('products/create', 'ProductController@create')->name('admin.products.create');
+// Route::resource('products', 'ProductController');
+// Route::get('products', 'ProductController@index')->name('admin.products.index');
+// Route::get('products/create', 'ProductController@create')->name('admin.products.create');
 
 // Profile routes
 Route::middleware('auth')->group(function () {

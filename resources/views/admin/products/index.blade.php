@@ -9,11 +9,10 @@
             <div class="card">
                 <div class="card-header">Daftar Produk</div>
                 <div class="card-body">
-                    <a href="{{ route('admin.products.create') }}" class="btn btn-primary mb-2">Tambah Produk</a>
+                    <a href="{{ url('/product/create') }}" class="btn btn-primary mb-2">Tambah Produk</a>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nama Produk</th>
                                 <th>Harga</th>
                                 <th>Gambar</th>
@@ -23,7 +22,6 @@
                         <tbody>
                             @foreach ($products as $product)
                             <tr>
-                                <td>{{ $product->id }}</td>
                                 <td>{{ $product->nama_produk }}</td>
                                 <td>{{ $product->harga }}</td>
                                 <td>
