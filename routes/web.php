@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 // User routes
 Route::get('/', [UserController::class, 'index'])->name('index');
-Route::get('/tentangkami', [UserController::class, 'tentangkami'])->name('tentangkami');
+Route::get('/tentangkami', [App\Http\Controllers\User\TentangKamiController::class, 'index'])->name('user.product');
 Route::get('/paketmakanan', [MakananController::class, 'paketmakanan'])->name('paketmakanan');
 Route::get('/voucher', [VoucherController::class, 'voucher'])->name('voucher');
 Route::get('troli', [MakananController::class, 'troli'])->name('troli');

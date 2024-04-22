@@ -4,10 +4,17 @@
 
 @section('content')
 @section('menuProduk', 'active')
+
+<style>
+    .product-cart {
+        margin-top: 20px;
+        margin-left: 10rem;
+    }
+</style>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="card">
+        <div class="">
+            <div class="card product-cart">
                 <div class="card-header">Daftar Produk</div>
                 <div class="card-body">
                     <a href="{{ url('/product/create') }}" class="btn btn-primary mb-2">Tambah Produk</a>

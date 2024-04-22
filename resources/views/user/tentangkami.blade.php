@@ -3,6 +3,7 @@
 
 @section('menuAbout', 'active')
 @section('content')
+
     {{-- Konten START --}}
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('pacific/img/ftmakanan26.png');">
         <div class="container">
@@ -41,65 +42,31 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
+
+                        @foreach ($products as $product)
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan1.png');">
+                                style="background-image: url('{{ asset('gambar_produk/' . $product->gambar) }}');">
                                 <div class="icon d-flex align-items-center justify-content-center">
                                     <span
                                     class="fi fi-tr-cake-birthday">
                                     </span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Ulang Tahun</h3>
-                                    <p>Siap menemani acara ulang tahun Anda</p>
+                                    <h3 class="heading mb-3">{{ $product->nama_produk }}</h3>
+                                    <p>Rp {{ $product->harga }} / paket</p>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
 
                         {{-- Icon link  --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan2.png');">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fi fi-ts-restaurant"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Nasi Kuning</h3>
-                                    <p>Siap menemani acara hajatan Anda</p>
-                                </div>
-                            </div>
-                        </div>
-
                         {{-- Icon Link --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-straight/css/uicons-thin-straight.css'>
 
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan27.png');">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fi fi-tr-hamburger-soda"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Nasi Ayam</h3>
-                                    <p>Siap menemani acara gathering Anda</p>
-                                </div>
-                            </div>
-                        </div>
-
                         {{-- Icon link --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
-
-
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan28.png');">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fi fi-rs-room-service"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Nasi Kotak</h3>
-                                    <p>Siap menemani acara meeting Anda</p>
-                                </div>
-                            </div>
-                        </div>
 
                         {{-- Icon link --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-straight/css/uicons-regular-straight.css'>

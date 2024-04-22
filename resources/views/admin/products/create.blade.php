@@ -2,6 +2,7 @@
 
 @extends('layouts.sidebaradmin')
 
+@section('menuProduk', 'active')
 @section('content')
 <div class="container">
     <div class="row">

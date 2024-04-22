@@ -10,14 +10,6 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama_produk', 'harga', 'gambar', 'uuid'];
+    protected $fillable = ['nama_produk', 'harga', 'gambar'];
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::creating(function ($product) {
-            $product->uuid = (string) Str::uuid();
-        });
-    }
 }

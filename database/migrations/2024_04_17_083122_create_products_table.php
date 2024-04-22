@@ -16,18 +16,12 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uuid')->unique()->nullable();
             $table->string('nama_produk');
-            $table->decimal('harga', 8, 2);
+            $table->integer('harga');
             $table->string('gambar')->nullable();
             $table->timestamps();
         });
 
-        // Setiap produk yang sudah ada akan diberikan UUID baru
-        \App\Models\Product::all()->each(function ($product) {
-            $product->uuid = (string) Str::uuid();
-            $product->save();
-        });
     }
 
     /**
