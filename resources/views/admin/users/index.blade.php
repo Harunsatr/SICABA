@@ -93,11 +93,7 @@
                     <div class="card-header pb-0">
                         <h6>Tabel Pengguna</h6>
                     </div>
-                    <a
-                        href="{{ route('admin.users.create') }}"
-                        class="btn btn-primary mb-3"
-                        >Add User</a
-                    >
+                    <a href="{{ route('admin.users.create') }}" class="btn btn-primary mb-3 ms-4" style="width: fit-content;">Tambah User</a>
                     <div class="card-body px-0 pt-0 pb-2">
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
