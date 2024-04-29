@@ -214,65 +214,33 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
+                        @foreach ($products as $product)
                         <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
                             <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan1.png');">
-                                <div class="icon d-flex align-items-center justify-content-center ukuran-ikon">
+                                style="background-image: url('{{ asset('gambar_produk/' . $product->gambar) }}');">
+                                <div class="icon d-flex align-items-center justify-content-center">
                                     <span
                                     class="fi fi-tr-cake-birthday">
                                     </span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Ulang Tahun</h3>
-                                    <p>Siap menemani acara ulang tahun Anda</p>
+                                    <h3 class="heading mb-3">{{ $product->nama_produk }}</h3>
+                                    <p>Rp {{ $product->harga }} / paket</p>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
 
                         {{-- Icon link  --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan2.png');">
-                                <div class="icon d-flex align-items-center justify-content-center ukuran-ikon"><span
-                                        class="fi fi-ts-restaurant"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Nasi Kuning</h3>
-                                    <p>Siap menemani acara hajatan Anda</p>
-                                </div>
-                            </div>
-                        </div>
-
                         {{-- Icon Link --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-straight/css/uicons-thin-straight.css'>
 
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan27.png');">
-                                <div class="icon d-flex align-items-center justify-content-center ukuran-ikon"><span
-                                        class="fi fi-tr-hamburger-soda"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Nasi Ayam</h3>
-                                    <p>Siap menemani acara gathering Anda</p>
-                                </div>
-                            </div>
-                        </div>
 
                         {{-- Icon link --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
 
-                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                            <div class="services services-1  d-block img"
-                                style="background-image: url('pacific/img/ftmakanan28.png');">
-                                <div class="icon d-flex align-items-center justify-content-center ukuran-ikon"><span
-                                        class="fi fi-rs-room-service"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Paket Nasi Kotak</h3>
-                                    <p>Siap menemani acara meeting Anda</p>
-                                </div>
-                            </div>
-                        </div>
 
                         {{-- Icon link --}}
                         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-straight/css/uicons-regular-straight.css'>
@@ -298,50 +266,19 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="carousel-destination owl-carousel ftco-animate">
+                        @foreach ($products as $product)
                         <div class="item">
                             <div class="project-destination">
                                 <a href={{url("paketmakanan")}} class="img"
-                                    style="background-image: url('pacific/img/ftmakanan10.png');">
+                                    style="background-image: url('{{ asset('gambar_produk/' . $product->gambar) }}');">
                                     <div class="text">
-                                        <h3>Lorem Ipsum</h3>
-                                        <span>Rp</span>
+                                        <h3>{{ $product->nama_produk }}</h3>
+                                        <span>Rp {{ $product->harga }} / paket</span>
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="project-destination">
-                                <a href={{url("paketmakanan")}} class="img"
-                                    style="background-image: url('pacific/img/ftmakanan12.png');">
-                                    <div class="text">
-                                        <h3>Lorem Ipsum</h3>
-                                        <span>Rp</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="project-destination">
-                                <a href={{url("paketmakanan")}} class="img"
-                                    style="background-image: url('pacific/img/ftmakanan13.png');">
-                                    <div class="text">
-                                        <h3>Lorem Ipsum</h3>
-                                        <span>Rp</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="project-destination">
-                                <a href={{url("paketmakanan")}} class="img"
-                                    style="background-image: url('pacific/img/ftmakanan14.png');">
-                                    <div class="text">
-                                        <h3>Lorem Ipsum</h3>
-                                        <span>Rp</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
                         <div class="item">
                             <div class="project-destination">
                                 <a href={{url("paketmakanan")}} class="img"
@@ -370,109 +307,20 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($products as $product)                    
                 <div class="col-md-4 ftco-animate">
                     <div class="project-wrap">
-                        <a href={{url("paketmakanan")}} class="img" style="background-image: url('pacific/img/ftmakanan16.png');">
-                            <span class="price">Lorem Ipsum</span>
+                        <a href="{{ url("paketmakanan") }}" class="img" style="background-image: url('{{ asset('gambar_produk/' . $product->gambar) }}');">
+                            <span class="price">{{$product->nama_produk}}</span>
                         </a>
                         <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href={{url("paketmakanan")}}>Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span>Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-mountains"></span>Lorem ipsum</li>
-                            </ul>
+                            <h3><a href="{{ url("paketmakanan") }}">{{$product->nama_produk}}</a></h3>
+                            <p class="location"></span>Rp {{$product->harga}} / Paket</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href={{url("paketmakanan")}} class="img" style="background-image: url('pacific/img/ftmakanan17.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href={{url("paketmakanan")}}>Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href={{url("paketmakanan")}} class="img" style="background-image: url('pacific/img/ftmakanan18.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href={{url("paketmakanan")}}>Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href={{url("paketmakanan")}} class="img" style="background-image: url('pacific/img/ftmakanan20.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href={{url("paketmakanan")}}>Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href={{url("paketmakanan")}} class="img" style="background-image: url('pacific/img/ftmakanan21.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href={{url("paketmakanan")}}>Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span>Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href={{url("paketmakanan")}} class="img" style="background-image: url('pacific/img/ftmakanan22.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href={{url("paketmakanan")}}>Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+            </div>            
         </div>
     </section>
     {{-- Daftar Paket END --}}

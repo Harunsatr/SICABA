@@ -28,110 +28,25 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($products as $product)
                 <div class="col-md-4 ftco-animate">
                     <div class="project-wrap">
-                        <a href="#" class="img" style="background-image: url('pacific/img/ftmakanan16.png');">
-                            <span class="price">Rp. 15.000,00</span>
+                        <a href="#" class="img" style="background-image: url('{{ asset('gambar_produk/' . $product->gambar) }}');">
+                            <span class="price">Rp {{$product->harga}} / Paket</span>
                         </a>
                         <div class="text p-4">
                             <span class="days">Spesial Menu</span>
-                            <h3><a href="#">Paket Ulang Tahun</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> &nbsp; Pilih lokasimu</p>
+                            <h3><a href="#">{{$product->nama_produk}}</a></h3>
+                            {{-- <p class="location"><span class="fa fa-map-marker"></span> &nbsp; Pilih lokasimu</p> --}}
                             <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-mountains"></span>Lorem ipsum</li>
+                                <li><span class="flaticon-mountains"></span>Order Sekarang</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href="#" class="img" style="background-image: url('pacific/img/ftmakanan17.png');">
-                            <span class="price">Rp. 10.000,00/span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Spesial Menu</span>
-                            <h3><a href="#">Paket Nasi Kuning</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> &nbsp; Pilih lokasimu</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href="#" class="img" style="background-image: url('pacific/img/ftmakanan18.png');">
-                            <span class="price">Rp. 10.000,00</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Best Seller</span>
-                            <h3><a href="#">Nasi Ayam</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> &nbsp; Pilih lokasimu</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href="#" class="img" style="background-image: url('pacific/img/ftmakanan20.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href="#">Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href="#" class="img" style="background-image: url('pacific/img/ftmakanan21.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href="#">Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span>Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ftco-animate">
-                    <div class="project-wrap">
-                        <a href="#" class="img" style="background-image: url('pacific/img/ftmakanan22.png');">
-                            <span class="price">Lorem Ipsum</span>
-                        </a>
-                        <div class="text p-4">
-                            <span class="days">Lorem Ipsum</span>
-                            <h3><a href="#">Lorem ipsum dolor</a></h3>
-                            <p class="location"><span class="fa fa-map-marker"></span> Lorem ipsum dolor</p>
-                            <ul>
-                                <li><span class="flaticon-shower"></span>2</li>
-                                <li><span class="flaticon-king-size"></span>3</li>
-                                <li><span class="flaticon-sun-umbrella"></span>Lorem ipsum</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            <div class="row mt-5">
+            {{-- <div class="row mt-5">
                 <div class="col text-center">
                     <div class="block-27">
                         <ul>
@@ -145,7 +60,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     {{-- Daftar Paket END --}}

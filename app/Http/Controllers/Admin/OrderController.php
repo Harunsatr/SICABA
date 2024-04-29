@@ -13,14 +13,14 @@ class OrderController extends Controller
     public function index()
     {
         $orders = Order::with('user', 'product')->latest()->paginate(10);
-        return view('orders.index', compact('orders'));
+        return view('admin.orders.index', compact('orders'));
     }
 
     public function create()
     {
         $users = User::all();
         $products = Product::all();
-        return view('orders.create', compact('users', 'products'));
+        return view('admin.orders.create', compact('users', 'products'));
     }
 
     public function store(Request $request)
@@ -39,14 +39,14 @@ class OrderController extends Controller
 
     public function show(Order $order)
     {
-        return view('orders.show', compact('order'));
+        return view('admin.orders.index', compact('order'));
     }
 
     public function edit(Order $order)
     {
         $users = User::all();
         $products = Product::all();
-        return view('orders.edit', compact('order', 'users', 'products'));
+        return view('admin.orders.edit', compact('order', 'users', 'products'));
     }
 
     public function update(Request $request, Order $order)

@@ -46,7 +46,7 @@
                     <li class="nav-item @yield('menuHome')"><a href={{url('/')}} class="nav-link">Beranda</a></li>
                     <li class="nav-item @yield('menuAbout')"><a href={{url('tentangkami')}} class="nav-link">Tentang Kami</a></li>
                     <li class="nav-item @yield('menuPaket')"><a href={{url('paketmakanan')}} class="nav-link">Paket Makanan</a></li>
-                    <li class="nav-item @yield('menuVoucher')"><a href={{url('voucher')}} class="nav-link">Voucher</a></li>
+                    {{-- <li class="nav-item @yield('menuVoucher')"><a href={{url('voucher')}} class="nav-link">Voucher</a></li> --}}
                     <li class="nav-item @yield('menuTroli')">
                         <a href="{{url('troli')}}" class="nav-link">
                             <img src="{{ asset('pacific/img/keranjang.png') }}" alt="Troli" style="width: 25px; height: auto;">
@@ -93,7 +93,7 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-12 mt-2">
-                    <p class="colornew"> &copy; <span class="colornew">2023 SICABA | Katering Bu Aini</span>
+                    <p class="colornew"> &copy; <span class="colornew">2024 SICABA | Katering Bu Aini</span>
                     </p>
                 </div>
             </div>

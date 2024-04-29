@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\AdminProductsController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MakananController;
@@ -23,9 +24,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // User routes
-Route::get('/', [UserController::class, 'index'])->name('index');
+Route::get('/', [App\Http\Controllers\User\BerandaController::class, 'index'])->name('index');
 Route::get('/tentangkami', [App\Http\Controllers\User\TentangKamiController::class, 'index'])->name('user.product');
-Route::get('/paketmakanan', [MakananController::class, 'paketmakanan'])->name('paketmakanan');
+Route::get('/paketmakanan', [App\Http\Controllers\User\PaketMakananController::class, 'index'])->name('user.paketmakanan');
 Route::get('/voucher', [VoucherController::class, 'voucher'])->name('voucher');
 Route::get('troli', [MakananController::class, 'troli'])->name('troli');
 
@@ -69,6 +70,12 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/products/{id}/edit', [AdminProductsController::class, 'edit'])->name('admin.products.edit');
     Route::put('/products/{id}', [AdminProductsController::class, 'update'])->name('admin.products.update');
     Route::delete('/products/{id}', [AdminProductsController::class, 'destroy'])->name('admin.products.destroy');
+    Route::get('/orders/create', [OrderController::class, 'create'])->name('admin.orders.create');
+    Route::post('/orders', [OrderController::class, 'store'])->name('admin.orders.store');
+    Route::get('/orders', [OrderController::class, 'index'])->name('admin.orders.index');
+    Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('admin.orders.edit');
+    Route::put('/orders/{order}', [OrderController::class, 'update'])->name('admin.orders.update');
+    Route::delete('/orders/{order}', [OrderController::class, 'destroy'])->name('admin.orders.destroy');
 });
 
 
