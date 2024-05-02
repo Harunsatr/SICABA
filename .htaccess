@@ -1,0 +1,9 @@
+# ErrorDocument 403 /.env
+# ErrorDocument 403 /.env.example
+
+# RewriteRule ^files/(?!.*\.pdf$) - [F,NC]
+
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>

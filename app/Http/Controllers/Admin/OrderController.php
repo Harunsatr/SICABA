@@ -29,6 +29,11 @@ class OrderController extends Controller
             'user_id' => 'required',
             'product_id' => 'required',
             'phone_number' => 'required',
+            'alamat' => 'required',
+            'status' => 'required',
+            'jumlah' => 'required',
+            'user_name' => 'required',
+            'product_name' => 'required',
         ]);
 
         Order::create($request->all());
@@ -55,6 +60,11 @@ class OrderController extends Controller
             'user_id' => 'required',
             'product_id' => 'required',
             'phone_number' => 'required',
+            'alamat' => 'required',
+            'status' => 'required',
+            'jumlah' => 'required',
+            'user_name' => 'required',
+            'product_name' => 'required',
         ]);
 
         $order->update($request->all());
