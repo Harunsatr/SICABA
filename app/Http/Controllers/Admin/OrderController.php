@@ -12,7 +12,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::with('user', 'product')->latest()->paginate(10);
+        $orders = Order::with(['user', 'product'])->latest()->paginate(10);
         return view('admin.orders.index', compact('orders'));
     }
 
@@ -26,17 +26,17 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'user_id' => 'required',
-            'product_id' => 'required',
-            'phone_number' => 'required',
-            'alamat' => 'required',
-            'status' => 'required',
-            'jumlah' => 'required',
+            'user_id' => 'required|exists:users,id',
+            'product_id' => 'required|exists:products,id',
+            'quantity' => 'required|integer|min:1',
+            'phone_number' => 'required|string',
+            'address' => 'required|string',
+            'status' => 'required|string',
         ]);
 
         Order::create($request->all());
 
-        return redirect()->route('orders.index')
+        return redirect()->route('admin.orders.index')
                          ->with('success', 'Order created successfully.');
     }
 
@@ -55,17 +55,17 @@ class OrderController extends Controller
     public function update(Request $request, Order $order)
     {
         $request->validate([
-            'user_id' => 'required',
-            'product_id' => 'required',
-            'phone_number' => 'required',
-            'alamat' => 'required',
-            'status' => 'required',
-            'jumlah' => 'required',
+            'user_id' => 'required|exists:users,id',
+            'product_id' => 'required|exists:products,id',
+            'quantity' => 'required|integer|min:1',
+            'phone_number' => 'required|string',
+            'address' => 'required|string',
+            'status' => 'required|string',
         ]);
 
         $order->update($request->all());
 
-        return redirect()->route('orders.index')
+        return redirect()->route('admin.orders.index')
                          ->with('success', 'Order updated successfully');
     }
 
@@ -73,7 +73,7 @@ class OrderController extends Controller
     {
         $order->delete();
 
-        return redirect()->route('orders.index')
+        return redirect()->route('admin.orders.index')
                          ->with('success', 'Order deleted successfully');
     }
 }
