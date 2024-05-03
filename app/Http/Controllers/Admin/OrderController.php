@@ -32,8 +32,6 @@ class OrderController extends Controller
             'alamat' => 'required',
             'status' => 'required',
             'jumlah' => 'required',
-            'user_name' => 'required',
-            'product_name' => 'required',
         ]);
 
         Order::create($request->all());
@@ -44,7 +42,7 @@ class OrderController extends Controller
 
     public function show(Order $order)
     {
-        return view('admin.orders.index', compact('order'));
+        return view('admin.orders.show', compact('order'));
     }
 
     public function edit(Order $order)
@@ -63,8 +61,6 @@ class OrderController extends Controller
             'alamat' => 'required',
             'status' => 'required',
             'jumlah' => 'required',
-            'user_name' => 'required',
-            'product_name' => 'required',
         ]);
 
         $order->update($request->all());

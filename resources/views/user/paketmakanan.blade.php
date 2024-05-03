@@ -31,9 +31,9 @@
                 @foreach ($products as $product)
                 <div class="col-md-4 ftco-animate">
                     <div class="project-wrap">
-                        <a href="#" class="img" style="background-image: url('{{ asset('gambar_produk/' . $product->gambar) }}');">
+                        <button class="img" style="background-image: url('{{ asset('gambar_produk/' . $product->gambar) }}');">
                             <span class="price">Rp {{$product->harga}} / Paket</span>
-                        </a>
+                        </button>
                         <div class="text p-4">
                             <span class="days">Spesial Menu</span>
                             <h3><a href="#">{{$product->nama_produk}}</a></h3>

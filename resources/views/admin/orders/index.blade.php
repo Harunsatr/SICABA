@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card mt-5">
+            <div class="card mt-5 ms-10">
                 <div class="card-header">Daftar Order</div>
                 <div class="card-body">
                     <div class="mb-3">
