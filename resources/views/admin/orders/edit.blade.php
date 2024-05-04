@@ -8,7 +8,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Edit Order</div>
-
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.orders.update', $order->id) }}">
                         @csrf

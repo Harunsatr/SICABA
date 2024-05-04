@@ -31,7 +31,7 @@ class OrderController extends Controller
             'quantity' => 'required|integer|min:1',
             'phone_number' => 'required|string',
             'address' => 'required|string',
-            'status' => 'required|string',
+            'status' => 'required|string'
         ]);
 
         Order::create($request->all());

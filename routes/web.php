@@ -31,6 +31,7 @@ Route::get('/welcome', function () {
 Route::get('/', [App\Http\Controllers\User\BerandaController::class, 'index'])->name('index');
 Route::get('/tentangkami', [App\Http\Controllers\User\TentangKamiController::class, 'index'])->name('user.product');
 Route::get('/paketmakanan', [App\Http\Controllers\User\PaketMakananController::class, 'index'])->name('user.paketmakanan');
+// Route::get('/paketmakanan/{id}', [App\Http\Controllers\User\PaketMakananUserController::class, 'index'])->name('user.paketmakanan');
 Route::get('/voucher', [VoucherController::class, 'voucher'])->name('voucher');
 Route::get('troli', [MakananController::class, 'troli'])->name('troli');
 
@@ -68,7 +69,7 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/users', [AdminUsersController::class, 'index'])->name('admin.users.index');
     Route::get('/users/{id}/edit', [AdminUsersController::class, 'edit'])->name('admin.users.edit');
     Route::delete('/admin/users/{user}', [AdminUsersController::class, 'destroy'])->name('admin.users.destroy');
-    Route::get('/product/create', [AdminProductsController::class, 'create'])->name('admin.users.create');
+    Route::get('/product/create', [AdminProductsController::class, 'create'])->name('admin.products.create');
     Route::post('/admin/products', [AdminProductsController::class, 'store'])->name('admin.products.store');
     Route::get('/products', [AdminProductsController::class, 'index'])->name('admin.products.index');
     Route::get('/products/{id}/edit', [AdminProductsController::class, 'edit'])->name('admin.products.edit');

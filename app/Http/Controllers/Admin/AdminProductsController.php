@@ -21,14 +21,13 @@ class AdminProductsController extends Controller
 
     public function store(Request $request)
     {
-        // Validasi input
         $request->validate([
             'nama_produk' => 'required',
             'harga' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Upload gambar jika ada
+        // Untuk mengupload gambar produk
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
             $nama_gambar = time().'.'.$gambar->getClientOriginalExtension();
@@ -37,7 +36,6 @@ class AdminProductsController extends Controller
             $nama_gambar = null;
         }
 
-        // Simpan data produk
         Product::create([
             'nama_produk' => $request->nama_produk,
             'harga' => $request->harga,
@@ -55,29 +53,25 @@ class AdminProductsController extends Controller
 
     public function update(Request $request, $id)
     {
-        // Validasi input
         $request->validate([
             'nama_produk' => 'required',
             'harga' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Ambil data produk yang akan diupdate
         $product = Product::findOrFail($id);
 
-        // Upload gambar baru jika ada
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
             $nama_gambar = time().'.'.$gambar->getClientOriginalExtension();
             $gambar->move(public_path('gambar_produk'), $nama_gambar);
-            // Hapus gambar lama jika ada
+
             if ($product->gambar) {
                 unlink(public_path('gambar_produk/' . $product->gambar));
             }
             $product->gambar = $nama_gambar;
         }
 
-        // Update data produk
         $product->update([
             'nama_produk' => $request->nama_produk,
             'harga' => $request->harga,
@@ -88,7 +82,7 @@ class AdminProductsController extends Controller
 
     public function destroy($id)
     {
-        // Hapus data produk
+
         $product = Product::findOrFail($id);
         if ($product->gambar) {
             unlink(public_path('gambar_produk/' . $product->gambar));

@@ -111,6 +111,19 @@
     {{-- Loader END --}}
 
     {{-- Script  --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButtons = document.querySelectorAll('.order-btn');
+    
+            orderButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const productId = button.getAttribute('data-product');
+                    document.getElementById('product_id').value = productId;
+                    $('#orderModal').modal('show');
+                });
+            });
+        });
+    </script>
     <script src="{{ asset('pacific/js/jquery.min.js') }}"></script>
     <script src="{{ asset('pacific/js/jquery-migrate-3.0.1.min.js') }}"></script>
     <script src="{{ asset('pacific/js/popper.min.js') }}"></script>
