@@ -11,17 +11,17 @@
                     Tambah Pemesanan
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('admin.orders.create') }}" class="btn btn-sm btn-primary">Add Order</a>
+                    <a href="{{ route('admin.orders.create') }}" class="btn btn-sm btn-primary">Tambah</a>
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>User</th>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Phone Number</th>
-                                <th>Address</th>
+                                <th>Produk</th>
+                                <th>Jumlah</th>
+                                <th>No Handphone</th>
+                                <th>Alamat</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MakananController;
+use App\Http\Controllers\User\CartController;
+use App\Http\Controllers\User\OrderUserController;
 use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Route;
@@ -30,10 +32,11 @@ Route::get('/welcome', function () {
 // User routes
 Route::get('/', [App\Http\Controllers\User\BerandaController::class, 'index'])->name('index');
 Route::get('/tentangkami', [App\Http\Controllers\User\TentangKamiController::class, 'index'])->name('user.product');
-Route::get('/paketmakanan', [App\Http\Controllers\User\PaketMakananController::class, 'index'])->name('user.paketmakanan');
-// Route::get('/paketmakanan/{id}', [App\Http\Controllers\User\PaketMakananUserController::class, 'index'])->name('user.paketmakanan');
+Route::get('/paketmakanan', [App\Http\Controllers\User\PaketMakananController::class, 'index'])->middleware(['auth', 'verified'])->name('user.paketmakanan');
+Route::post('/orders/store', [OrderUserController::class, 'store' ])->name('orders.store');
 Route::get('/voucher', [VoucherController::class, 'voucher'])->name('voucher');
-Route::get('troli', [MakananController::class, 'troli'])->name('troli');
+Route::get('/troli', [CartController::class, 'index'])->name('user.troli');
+Route::delete('/troli/{troli}', [CartController::class, 'destroy'])->name('cart.destroy');
 
 // Route Google
 Route::get('/home', [UserController::class, 'index'])->name('home');

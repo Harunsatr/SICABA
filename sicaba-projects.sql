@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Apr 2024 pada 08.43
+-- Waktu pembuatan: 04 Bulan Mei 2024 pada 17.51
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -80,7 +80,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (39, '2024_03_18_134050_remove_password_column_from_users_table', 1),
 (40, '2024_03_20_012603_add_password_to_users_table', 1),
 (43, '2024_04_17_083122_create_products_table', 2),
-(44, '2024_04_23_035723_create_order_table', 3);
+(45, '2024_04_23_035723_create_order_table', 3);
 
 -- --------------------------------------------------------
 
@@ -123,9 +123,10 @@ CREATE TABLE `orders` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `product_id` bigint(20) UNSIGNED NOT NULL,
+  `quantity` int(11) NOT NULL,
   `phone_number` varchar(255) NOT NULL,
-  `user_name` varchar(255) NOT NULL,
-  `product_name` varchar(255) NOT NULL,
+  `address` text NOT NULL,
+  `status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -407,13 +408,13 @@ ALTER TABLE `google_users`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT untuk tabel `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `permissions`
