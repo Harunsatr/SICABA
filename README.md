@@ -1,4 +1,4 @@
-# SICABA - Sistem Informasi Cathering Bu Aini
+# SICABA - Sistem Informasi Catering Bu Aini
 <p>Hi everyone ! <br>
 This is our project repository about SICABA <br>
 Hope u happy to used it</p>
