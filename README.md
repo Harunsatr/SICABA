@@ -24,7 +24,7 @@ git clone https://github.com/Harunsatr/SICABA.git
 ### Change Directory
 Change the directory to the project :
 ```bash
-cd sicaba-projects
+cd SICABA
 ```
 
 ### Install the Composer
@@ -49,7 +49,7 @@ npm install
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=sicaba-projects
+DB_DATABASE=sicaba
 DB_USERNAME=root
 DB_PASSWORD=
 ```
